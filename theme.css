@@ -1,8 +1,8 @@
-
 /*
-  This theme is based on the 'idaskins-dark' theme found
-  at <https://github.com/zyantific/IDASkins.git>
+  based on the 'ida_nightfall' theme found at <https://github.com/0xItx/ida_nightfall>
+  and basic 'dark'&'darkula' themes from IDA Pro installation
 */
+
 
 @importtheme "_base";
 
@@ -462,9 +462,14 @@ MainMsgList
     background-color: #363636;
 }
 
+TCpuRegs IDALabel
+{
+    color: #ffff00;
+}
+
 TCpuRegs
 {
-    color: #AAAAAA;
+    background-color: #000000;
     qproperty-register-defined: #ffffff;
     qproperty-register-changed: #00bbff;
     qproperty-register-edited: #b8077a;
