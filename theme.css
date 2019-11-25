@@ -1,7 +1,357 @@
+
+/*
+  This theme is based on the 'idaskins-dark' theme found
+  at <https://github.com/zyantific/IDASkins.git>
+*/
+
 @importtheme "_base";
+
+QWidget
+{
+    background-color: #363636;
+    color: #ddd;
+}
+
+QCheckBox
+{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+QTextEdit,
+QPlainTextEdit
+{
+    background-color: #2d2d2d;
+    border: 1px solid #363636;
+    border-radius: 2px;
+}
+
+QMenu
+{
+    border: 1px solid #2A2A2A;
+}
+
+QMenuBar,
+QMenuBar::item
+{
+    background-color: #444444;
+    color: #ddd;
+}
+
+QMenu::item:selected
+{
+    background-color: #2A2A2A;
+}
+
+QMenu::item:disabled
+{
+    color: #666;
+}
+
+QLineEdit
+{
+    border: 1px solid #474747;
+    min-height: 20px;
+    border-radius: 2px;
+}
+
+QLineEdit:hover,
+QLineEdit:focus
+{
+    border: 1px solid #00aaaa;
+}
+
+QTabBar::tab
+{
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #555555, stop: 1 #444444);
+}
+
+QTabBar::tab:selected
+{
+    background-color: #777777;
+}
+
+QTableView
+{
+    border: 1px solid #474747;
+    background-color: #2d2d2d;
+}
+
+QHeaderView::section
+{
+    background-color: #444;
+    border: none;
+    border-left: 1px solid #666;
+    border-right: 1px solid #333;
+    padding: 3px;
+    min-height: 20px;
+}
+
+QHeaderView:horizontal::section
+{
+    min-height: 20px;
+}
+
+QHeaderView:vertical::section
+{
+}
+
+QTableCornerButton::section
+{
+    background: #222;
+    border: 2px outset #222;
+}
+
+CustomIDAMemo,
+EditContainer
+{
+    /* FIXME */
+    /* font-family: "<TEXT_INPUT_FONT_FAMILY>"; */
+    /* font-size: <TEXT_INPUT_FONT_SIZE>; */
+    /* font-style: <TEXT_INPUT_FONT_STYLE>; */
+    /* font-weight: <TEXT_INPUT_FONT_WEIGHT>; */
+}
+
+IDAView
+{
+    /* FIXME */
+    /* font-family: "<DISASSEMBLY_FONT_FAMILY>"; */
+    /* font-size: <DISASSEMBLY_FONT_SIZE>; */
+    /* font-style: <DISASSEMBLY_FONT_STYLE>; */
+    /* font-weight: <DISASSEMBLY_FONT_WEIGHT>; */
+}
+
+hexview_t
+{
+    /* FIXME */
+    /* font-family: "<HEXVIEW_FONT_FAMILY>"; */
+    /* font-size: <HEXVIEW_FONT_SIZE>; */
+    /* font-style: <HEXVIEW_FONT_STYLE>; */
+    /* font-weight: <HEXVIEW_FONT_WEIGHT>; */
+}
+
+/* TODO: DEBUG_REGISTERS, OUTPUT_WINDOW */
+
+QScrollBar
+{
+    background-color: #363636;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 0;
+}
+
+QScrollBar::sub-line,
+QScrollBar::add-line
+{
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page
+{
+    background: none;
+}
+
+QScrollBar::handle:vertical
+{
+    min-height: 20px;
+}
+
+QScrollBar::handle:horizontal
+{
+    min-width: 20px;
+}
+
+QScrollBar::handle
+{
+    background-color: #585858;
+    margin: 3px;
+    border-radius: 7px;
+}
+
+QToolBar
+{
+    border: none;
+}
+
+QPushButton
+{
+    border: 1px solid #077;
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 2px;
+}
+
+QPushButton:hover,
+QPushButton:default
+{
+    border: 1px solid #0aa;
+}
+
+QPushButton:pressed
+{
+    border: 1px solid #0ee;
+}
+
+TNavBand > QPushButton,
+nav_scroll_button_t,
+RegJumpButton
+{
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: none;
+}
+
+QPushButton.DockWidgetTitleButton
+{
+    border: none;
+    min-height: 15px;
+    min-width: 15px;
+    margin: 5px;
+    padding: 3px;
+}
+
+DockWidgetTitle
+{
+    min-height: 30px;
+    padding-bottom: 5px;
+}
+
+QComboBox
+{
+    border: 1px solid #474747;
+    border-radius: 2px;
+    color: #ddd;
+    /*  KLUDGE: https://stackoverflow.com/questions/24447276/qcombobox-text-colour-wont-change-with-style-sheet */
+    padding: 1px 0px 1px 3px;
+}
+
+QComboBox > QLineEdit,
+QComboBox > QLineEdit:hover,
+QComboBox > QLineEdit:focus
+{
+    border: none;
+    min-height: default;
+}
+
+QComboBox:hover,
+QComboBox:focus
+{
+    border: 1px solid #00aaaa;
+}
+
+QComboBox::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: #666;
+    border-left-style: solid;
+}
+
+/* The 'menu' of a QComboBox */
+QComboBox QAbstractItemView
+{
+    border: 1px solid #2A2A2A;
+}
+
+QComboBox:!editable
+{
+    background-color: #424242;
+}
+
+QComboBox::down-arrow
+{
+    image: url("$RELPATH/icons/expand.png");
+}
+
+/* Close, maximize and undock button for dock widgets */
+IDADockWidget > QWidget > QAbstractButton
+{
+    background-color: #666;
+    border-radius: 3px;
+}
+
+QRadioButton,
+QLabel,
+QCheckBox
+{
+    background: transparent;
+}
+
+QStatusBar QLabel
+{
+    border: none;
+}
+
+QStatusBar::item
+{
+    border: 1px solid #585858;
+    border-radius: 2px;
+}
+
+EditContainer,
+ChooserContainer,
+QGroupBox,
+QListView,
+QTreeView
+{
+    border: 1px solid #606060;
+    border-radius: 2px;
+}
+
+QGroupBox
+{
+    margin-top: 5px;
+}
+
+QGroupBox::title
+{
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+}
+
+/* Remove border from IDC/Python switch button */
+CLIWidget > QGroupBox > QPushButton,
+CLIWidget > QGroupBox > QPushButton:hover,
+CLIWidget > QGroupBox > QPushButton:focus
+{
+    border: none;
+}
+
+CLIWidget > QGroupBox
+{
+    margin-top: 0;
+}
+
+QTreeView::item:selected,
+QListView::item:selected,
+QTableView::item:selected
+{
+    background-color: #474747;
+    color: #ddd;
+}
+
+QToolTip,
+QTipLabel
+{
+    border: 1px solid #077;
+    border-radius: 2px;
+    background: #111111;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+}
 
 CustomIDAMemo
 {
+    border: none;
     qproperty-line-fg-default: #aaaaaa;
     qproperty-line-fg-regular-comment: #d269df;
     qproperty-line-fg-repeatable-comment: #b15cb1;
@@ -85,13 +435,36 @@ CustomIDAMemo
     qproperty-line-bg-bpt-disabled: #1DE106;
 
 }
+
+CustomIDAMemo[debugging="true"]
+{
+    qproperty-line-fg-default: #BDBFBF;
+    qproperty-line-bg-default: #040404;
+    qproperty-line-pfx-current-item: #FD9824;
+    qproperty-line-pfx-current-line: #FD9824;
+    qproperty-line-bg-bpt-enabled: #B70806;
+    qproperty-line-bg-bpt-disabled: #1DE106;
+}
+
+CustomIDAMemo[hints="true"]
+{
+    qproperty-line-fg-default: #D9DEDE;
+    qproperty-line-bg-default: #414243;
+    qproperty-line-pfx-current-item: #FD9824;
+    qproperty-line-pfx-current-line: #FD9824;
+    qproperty-line-bg-bpt-enabled: #B70806;
+    qproperty-line-bg-bpt-disabled: #1DE106;
+}
+
 MainMsgList
 {
-    color: #000000;
-    background-color: #f3efff;
+    color: #ddd;
+    background-color: #363636;
 }
+
 TCpuRegs
 {
+    color: #AAAAAA;
     qproperty-register-defined: #ffffff;
     qproperty-register-changed: #00bbff;
     qproperty-register-edited: #b8077a;
@@ -118,22 +491,29 @@ navband_t
     qproperty-auto-analysis-cursor: #ff8000;
 }
 
-CustomIDAMemo[debugging="true"]
+TextEdit
 {
-    qproperty-line-fg-default: #BDBFBF;
-    qproperty-line-bg-default: #040404;
-    qproperty-line-pfx-current-item: #FD9824;
-    qproperty-line-pfx-current-line: #FD9824;
-    qproperty-line-bg-bpt-enabled: #B70806;
-    qproperty-line-bg-bpt-disabled: #1DE106;
+    qproperty-keyword1-fg: #7171FF;
+    qproperty-keyword2-fg: #C728C7;
+    qproperty-keyword3-fg: #FF4545;
+    qproperty-string-fg: #E47251;
+    qproperty-comment-fg: #5AC35A;
+    qproperty-preprocessor-fg: #7171FF;
 }
 
-CustomIDAMemo[hints="true"]
+TextEdit QWidget
 {
-    qproperty-line-fg-default: #D9DEDE;
-    qproperty-line-bg-default: #414243;
-    qproperty-line-pfx-current-item: #FD9824;
-    qproperty-line-pfx-current-line: #FD9824;
-    qproperty-line-bg-bpt-enabled: #B70806;
-    qproperty-line-bg-bpt-disabled: #1DE106;
+    background-color: transparent;
+}
+
+TextEdit text_edit_margin_widget_t
+{
+    color: lightgrey;
+    qproperty-header-color: gainsboro;
+}
+
+TChooser
+{
+    qproperty-highlight-bg-default: red;
+    qproperty-highlight-bg-selected: pink;
 }
