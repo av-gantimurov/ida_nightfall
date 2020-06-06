@@ -24,5 +24,5 @@ Invoke-Webrequest -Uri "https://raw.githubusercontent.com/av-gantimurov/ida_nigh
 ```
 
 ### Older versions
-* `wget "https://raw.githubusercontent.com/av-gantimurov/ida_nightfall/master/theme.css"`
+* `wget "https://raw.githubusercontent.com/av-gantimurov/ida_nightfall/master/ida_nightfall.clr"`
 * Options -> Colors -> Import
